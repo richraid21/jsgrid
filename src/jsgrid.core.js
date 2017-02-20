@@ -1124,6 +1124,7 @@
 
             return this._controllerCall("insertItem", insertingItem, args.cancel, function(insertedItem) {
                 insertedItem = insertedItem || insertingItem;
+                
                 if(this.insertedRowLocation === "bottom"){
                     this._loadStrategy.finishInsertBottom(insertedItem);
                 }
