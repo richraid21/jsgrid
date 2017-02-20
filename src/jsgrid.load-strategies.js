@@ -47,10 +47,16 @@
             this._grid.option("data", loadedData);
         },
 
-        finishInsert: function(insertedItem) {
+        finishInsertBottom: function(insertedItem) {
             var grid = this._grid;
             grid.option("data").push(insertedItem);
             grid.refresh();
+        },
+
+        finishInsertTop: function(insertedItem) {
+            var grid = this._grid;
+            grid.option("data").unshift(insertedItem);
+			grid.refresh();
         },
 
         finishDelete: function(deletedItem, deletedItemIndex) {
